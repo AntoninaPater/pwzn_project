@@ -70,6 +70,7 @@ def calculate_matrices(v):
     :return: a: macierz A z metody Crancka-Nicolsona
     :return: b: macierz B z metody Cranka-Nicolsona
     """
+
     alpha = -par.dt / (2 * par.dx * par.dx) * ct.hbar / (2 * ct.m_e * 1.j)
     a = np.zeros([par.N + 1, par.N + 1], dtype=complex)
     b = np.zeros([par.N + 1, par.N + 1], dtype=complex)
@@ -77,8 +78,8 @@ def calculate_matrices(v):
     a[0, 0] = a[par.N, par.N] = 1.
     b[0, 0] = b[par.N, par.N] = 1.
     for i in range(1, par.N):
-        a[i, i] = 1 + 2 * alpha
-        b[i, i] = 1 - 2 * alpha + v[i]*par.dt/(1.j * ct.hbar)
+        a[i, i] = 1 + 2 * alpha - 0.5* v[i]*par.dt/(1.j * ct.hbar)
+        b[i, i] = 1 - 2 * alpha + 0.5* v[i]*par.dt/(1.j * ct.hbar)
         a[i, i + 1] = -alpha
         b[i, i + 1] = alpha
         a[i, i - 1] = -alpha

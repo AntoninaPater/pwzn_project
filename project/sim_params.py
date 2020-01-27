@@ -19,7 +19,7 @@ def check(strin, temp):
     :param temp: sprawdzana wartość
     :return: True, jeśli poprawna, False wpp.
     """
-    if strin == 'x0' and 0 <= temp <= 40:
+    if strin == 'x0' and 0 <= temp <= 20:
         return True
     elif strin == 'lam' and temp >= 0:
         return True
@@ -93,9 +93,9 @@ def menu():
     instr = input("Wykonać symulację z parametrami domyślnymi (tak/nie)? [nie]\n")
     if not instr.lower() == 'tak':
         global x0, sigma, lam, val, l
-        x0 = selector("Podaj początkowe położenie cząstki w nm (od 0 do 40) [10]\n", 'x0', 1e-9)
+        x0 = selector("Podaj początkowe położenie cząstki w nm (od 0 do 20) [10]\n", 'x0', 1e-9)
         lam = selector("Podaj początkową długość fali związanej z cząstką w nm (większa od 0) [5]\n", 'lam', 1e-9)
-        print("Energia  kinetyczna cząstki to:", "{0:.4f}".format(ct.hbar**2*(2*ct.pi/lam)**2/(2*ct.m_e)/ct.e), "eV")
+        print("Przybliżona energia  kinetyczna cząstki to:", "{0:.4f}".format(ct.hbar**2*(2*ct.pi/lam)**2/(2*ct.m_e)/ct.e), "eV")
         sigma = selector("Podaj początkową szerokość paczki związanej z cząstką w nm (większa od 0) [2.5]\n",
                          'sigma', 1e-9)
         val = selector("Podaj wartość potencjału w eV (moduł mniejszy od 1) [0.15]\n", 'val', 1)
