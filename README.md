@@ -1,4 +1,4 @@
-#Symulacja paczki falowej napotykającej próg potencjału
+# Symulacja paczki falowej napotykającej próg potencjału
 
 Autor: Antonina Pater
 <br/><br/>
@@ -59,6 +59,6 @@ Wpisać 0 jako wysokość progu i potwierdzić klawiszem ENTER. <br/>
 Długość progu potwierdzić klawiszem ENTER. <br/>
 Wybrać wartości domyślne czasu wykreślania wciskająć klawisz ENTER. <br/>
 Symulacja wykona się z zadanymi parametrami. <br/> <br/>
-#####Źródła <br/>
+##### Źródła <br/>
 [1] J. Crank and P. Nicolson, "A practical method for numerical evaluation of solutions of partial differential equations of the heat-conduction type," Mathematical Proceedings of the Cambridge Philosophical Society, vol. 43, no. 1, pp. 50–67, 1947. <br/>
 [2] D. M. Sullivan, "Quantum Mechanics for Electrical Engineers," 2012.
