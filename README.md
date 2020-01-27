@@ -28,7 +28,7 @@ Program składa się z następujących plików:
 	* waveeq_cn.py - zawierającego funkcje do przeprowadzenia symulacji, liczenia obserwabli (energia kinetyczna i potencjalna) i normy funkcji falowej, <br/> 
 oraz oddzielnego folderu z testami. <br/> 
 
-    Program wykorzystuje następujące biblioteki: <br/>
+    By użyć program należy go pobrać z tej strony i pobrać następujące biblioteki (jeśli nie są już zainstlowane): <br/>
 numpy, scipy, matplotlib, time, multiprocessing.
 
 4. Przykład działania programu.  <br/>
